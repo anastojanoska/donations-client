@@ -3,6 +3,7 @@ import Welcome from './Welcome/Welcome';
 import Button from '../../../components/UI/Button/Button';
 import classes from '../../../components/UI/Button/Button.css';
 import Login from '../Login/Login';
+import Register from '../Register/Register';
 
 class  HomeContent extends Component{
 
@@ -17,20 +18,23 @@ class  HomeContent extends Component{
     }
 
     registerClickedHandler = () => {
-        this.setState({loginClicked: true});
+        this.setState({registerClicked: true});
     }
 
     render() {
         var show = <div>
                      <Welcome/>
-            <Button clicked={this.loginClickedHandler}>LOGIN</Button>
-            <Button clicked={this.registerClickedHandler}>REGISTER</Button>
-            <button className={classes.Button} onClick={this.loginClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Login</button>
-            <button className={classes.Button} onClick={this.registerClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Register</button>
+            <Button clicked={this.loginClickedHandler}>ЛОГИРАЈ СЕ</Button>
+            <Button clicked={this.registerClickedHandler}>РЕГИСТРИРАЈ СЕ</Button>
+            <button className={classes.Button} onClick={this.loginClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Логирај се</button>
+            <button className={classes.Button} onClick={this.registerClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Регистрирај се</button>
 
         </div>
         if(this.state.loginClicked && !this.state.registerClicked)    {
             show = <Login/>
+        }
+        else if(!this.state.loginClicked && this.state.registerClicked)    {
+            show = <Register/>
         }
 
         return (
