@@ -1,0 +1,41 @@
+.Welcome{
+    width: 100%;
+    margin: auto;
+    height: 250px;
+    overflow: scroll;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.Text{
+    height: 50%;
+    width: 65%;
+    backgroundColor : white;
+    align:center;
+    margin: auto;
+    border: 3px solid black;
+    textAlign: center;
+}
+
+@media(min-width: 1000px) and (min-height: 700px){
+    .Welcome{
+        width: 700px;
+        height: 600px;
+    }
+}
+
+@media(min-width: 500px) and (min-height: 401px){
+    .Welcome{
+        width: 450px;
+        height: 400px;
+    }
+}
+
+@media(min-width: 500px) and (min-height: 400px){
+    .Welcome{
+        width: 350px;
+        height: 300px;
+    }
+}
+
