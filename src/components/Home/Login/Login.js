@@ -1,26 +1,30 @@
 import React from 'react';
 import Auxiliary from '../../../hoc/Auxiliary';
 import classes from './Login.css';
+import Button from '../../UI/Button/Button';
+import {withRouter} from "react-router-dom";
+
 
 const login = () =>{
 
-        let Text = { width : "50%", height : "50%",backgroundColor : "#B01818",align:"center",margin: "auto", border: "3px solid black", textAlign: "center"}
-
     return (
-        <Auxiliary style={{"margin-top": "500px"}}>
-            <div className={classes.Login} style={Text}>
+        <Auxiliary >
+            <div className={classes.Login}>
+                <br/>
                 <table >
+                    <tbody>
                     <tr>
                         <td><label>Корисничко име:  </label></td>
-                        <td><input/></td>
+                        <td><input className={classes.input}/></td>
                     </tr>
                     <tr>
                         <td><label>Лозинка:  </label></td>
-                        <td><input/></td>
+                        <td><input className={classes.input}/></td>
                     </tr>
+                    </tbody>
                 </table>
 
-                <button>Логирај се</button>
+                <Button clicked="">Логирај се</Button>
             </div>
         </Auxiliary>
 
@@ -29,4 +33,4 @@ const login = () =>{
 
 }
 
-export default login;
+export default withRouter(login);

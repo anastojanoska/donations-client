@@ -1,6 +1,6 @@
 .Button {
-    background-color: transparent;
-    border: none;
+    background-color: #9F1B1B;
+    border-color: #910707;
     color: white;
     outline: none;
     cursor: pointer;
@@ -8,6 +8,7 @@
     padding: 10px;
     margin: 10px;
     font-weight: bold;
+    border-radius: 5px;
 }
 
 .Button:first-of-type {

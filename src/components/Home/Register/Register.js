@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import RegUser from './RegUser/RegUser';
 import RegOrg from './RegOrganization/RegOrganization';
+import Button from '../../UI/Button/Button';
+import classes from './Register.css';
+
 
 class Register extends Component{
 
@@ -19,9 +22,10 @@ class Register extends Component{
 
 
     render(){
-        var show = <div>
-                    <button onClick={this.regUserClickedHandler}>Физичко лице</button>
-                    <button onClick={this.regOrganizationClickedHandler}>Организација</button>
+        var show = <div className={classes.Register}>
+
+                    <Button clicked={this.regUserClickedHandler}>Физичко лице</Button>
+                    <Button clicked={this.regOrganizationClickedHandler}>Организација</Button>
                 </div>
 
         if(this.state.regUserClicked && !this.state.regOrganizationClicked){

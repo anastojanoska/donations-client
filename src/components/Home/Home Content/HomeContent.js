@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Welcome from './Welcome/Welcome';
 import Button from '../../../components/UI/Button/Button';
-import classes from '../../../components/UI/Button/Button.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
+import classes from './HomeContent.css';
 
 class  HomeContent extends Component{
 
@@ -15,21 +15,23 @@ class  HomeContent extends Component{
 
     loginClickedHandler = () => {
         this.setState({loginClicked: true});
+        //this.props.history.push('/login');
     }
 
     registerClickedHandler = () => {
         this.setState({registerClicked: true});
+        //this.props.history.push('/register');
     }
 
     render() {
+
         var show = <div>
                      <Welcome/>
                      <br/>
-            <Button clicked={this.loginClickedHandler}>ЛОГИРАЈ СЕ</Button>
-            <Button clicked={this.registerClickedHandler}>РЕГИСТРИРАЈ СЕ</Button>
-            <button className={classes.Button} onClick={this.loginClickedHandler} style={{backgroundColor: "#9F1B1B", borderColor: "#9F1B1B"}}>Логирај се</button>
-            <button className={classes.Button} onClick={this.registerClickedHandler} style={{backgroundColor: "#9F1B1B", borderColor: "#9F1B1B"}}>Регистрирај се</button>
-            <button className={classes.Button} onClick={this.registerClickedHandler} >Регистрирај се</button>
+                     <br/>
+                     <br/>
+            <Button clicked={this.loginClickedHandler}> Логирај се </Button>
+            <Button clicked={this.registerClickedHandler}> Регистрирај се </Button>
 
         </div>
         if(this.state.loginClicked && !this.state.registerClicked)    {
@@ -40,9 +42,8 @@ class  HomeContent extends Component{
         }
 
         return (
-            <div style={{margin : "auto"}}>
+            <div className={classes.HomeContent} >
                 {show}
-
             </div>
 
         );

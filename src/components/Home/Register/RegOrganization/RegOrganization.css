@@ -1,6 +1,6 @@
-.Login{
-    width: 450px;
-    height: 190px;
+.RegisterOrg{
+    width: 470px;
+    height: 370px;
     background-color : whitesmoke;
     align-content: inherit;
     margin: auto;
@@ -13,9 +13,9 @@
 }
 
 @media(max-width: 730px) {
-    .Login{
+    .RegisterOrg{
         width: 300px;
-        height: 250px;
+        height: 420px;
     }
     .input{
         width: 140px;
@@ -26,9 +26,9 @@
 }
 
 @media(max-width: 500px) {
-    .Login{
+    .RegisterOrg{
         width: 250px;
-        height: 250px;
+        height: 380px;
     }
     .input{
         width: 100px;
