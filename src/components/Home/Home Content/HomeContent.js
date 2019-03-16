@@ -24,10 +24,12 @@ class  HomeContent extends Component{
     render() {
         var show = <div>
                      <Welcome/>
+                     <br/>
             <Button clicked={this.loginClickedHandler}>ЛОГИРАЈ СЕ</Button>
             <Button clicked={this.registerClickedHandler}>РЕГИСТРИРАЈ СЕ</Button>
-            <button className={classes.Button} onClick={this.loginClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Логирај се</button>
-            <button className={classes.Button} onClick={this.registerClickedHandler} style={{backgroundColor: "white", borderColor: "white"}}>Регистрирај се</button>
+            <button className={classes.Button} onClick={this.loginClickedHandler} style={{backgroundColor: "#9F1B1B", borderColor: "#9F1B1B"}}>Логирај се</button>
+            <button className={classes.Button} onClick={this.registerClickedHandler} style={{backgroundColor: "#9F1B1B", borderColor: "#9F1B1B"}}>Регистрирај се</button>
+            <button className={classes.Button} onClick={this.registerClickedHandler} >Регистрирај се</button>
 
         </div>
         if(this.state.loginClicked && !this.state.registerClicked)    {
@@ -38,7 +40,7 @@ class  HomeContent extends Component{
         }
 
         return (
-            <div>
+            <div style={{margin : "auto"}}>
                 {show}
 
             </div>
