@@ -1,50 +1,34 @@
 import React from 'react';
-import Auxiliary from '../../../../hoc/Auxiliary';
-import classes from './RegUser.css';
-import Button from '../../../UI/Button/Button';
+
 
 const regUser = () =>{
 
 
     return (
-        <Auxiliary style={{"margin-top": "500px"}}>
-            <div className={classes.RegisterUser}>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td><label>Име: </label></td>
-                        <td><input className={classes.input}/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Презиме: </label></td>
-                        <td><input className={classes.input}/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Слика: </label></td>
-                        <td><input className={classes.input}/></td>
 
-                    </tr>
-                    <tr>
-                        <td><label>Телефонски број: </label></td>
-                        <td><input className={classes.input}/></td>
-
-                    </tr>
-                    <tr>
-                        <td><label>Е-маил: </label></td>
-                        <td><input className={classes.input}/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Лозинка: </label></td>
-                        <td><input className={classes.input}/></td>
-                    </tr>
-
-                    </tbody>
-                </table>
-
-                <Button clicked="">Регистрирај се</Button>
-            </div>
-        </Auxiliary>
-
+                    <div className="col-md-8 m-auto mb-5">
+                        <h1 className="display-4 text-center">Регистрирај се</h1>
+                        <p className="lead text-center">Креирајте го вашиот акаунт</p>
+                        <form className="mb-5">
+                            <div className="form-group">
+                                <input type="text" className="form-control form-control-lg" placeholder="Ime Prezime"
+                                       name="name" required/>
+                            </div>
+                            <div className="form-group">
+                                <input type="email" className="form-control form-control-lg" placeholder="Email Addresa"
+                                       name="email"/>
+                            </div>
+                            <div className="form-group">
+                                <input type="password" className="form-control form-control-lg" placeholder="Lozinka"
+                                       name="password"/>
+                            </div>
+                            <div className="form-group">
+                                <input type="password" className="form-control form-control-lg"
+                                       placeholder="Potvrdi lozinka" name="password2"/>
+                            </div>
+                            <input type="submit" className="btn btn-success btn-block mt-4"/>
+                        </form>
+                    </div>
 
     );
 
