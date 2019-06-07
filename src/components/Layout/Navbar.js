@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import logo from "../../donate-now-button.png";
 
 class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-sm navbar-danger bg-danger mb-4 text-white">
+            <nav className="navbar navbar-expand-sm navbar-danger bg-danger  text-white">
                 <div className="container">
                     <Link to="/">
-                        <img src="../../donate-now-button.png" height="60px" width="60px" className="rounded"/>
+                        <img src={logo} style={{width:"60px", height:"60px"}} className="rounded"/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"> </span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="mobile-nav">

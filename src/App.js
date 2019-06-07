@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter,Route,Switch} from "react-router-dom";
+import jwt_decode from 'jwt-decode';
 
 
-/*import logo from './logo.svg';
-import classes from './App.css';
-import Donations from './containers/Donations/Donations';
-import Toolbar from './components/Navigation/Toolbar/Toolbar';
-//import {Route,Switch} from "react-router-dom";
-import AboutUs from './components/Home/AboutUs/AboutUs';
-import Layout from "./components/Layout/Layout";
-import Login from "./components/Home/Login/Login";
-import Register from "./components/Home/Register/Register";
-import RegUser from "./components/Home/Register/RegUser/RegUser";
-import RegOrg from "./components/Home/Register/RegOrganization/RegOrganization";*/
 import Navbar from "./components/Layout/Navbar";
 import Landing from "./components/Layout/Landing";
 import Login from "./components/Home/Login/Login";
@@ -21,6 +11,16 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/Layout/Footer";
 //import RegUser from "./components/Home/Register/RegUser/RegUser";
 import DonationCategories from "./components/DonationCategories/DonationCategories";
+import Contact from "./components/Contact/Contact";
+import UserProfile from "./components/Profile/UserProfile";
+
+
+//ova se pravi za ako napravime refresh da ostaneme logirani
+//check for token
+// if(localStorage.jwtToken){
+//         window.location.href = "/login";
+//
+// }
 
 
 class App extends Component {
@@ -30,12 +30,14 @@ class App extends Component {
       return (
           <BrowserRouter>
               <div className="App">
-                      <Navbar/>
-                      <Route exact path="/" component={Landing}/>
-                      <Route exact path="/login" component={Login} />
+                  <Navbar/>
+                  <Route exact path="/" component={Landing}/>
+                  <Route exact path="/login" component={Login} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/about-us" component={AboutUs} />
                   <Route exact path="/donation-categories" component={DonationCategories} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/user-profile" component={UserProfile} />
                   <Footer/>
               </div>
           </BrowserRouter>

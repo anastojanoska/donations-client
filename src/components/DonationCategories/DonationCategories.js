@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
+
 class DonationCategories extends Component {
 
-    state = {
-        category:""
+    constructor(props) {
+        super(props);
+        this.state = {
+            category:""
+        }
     }
+
+
 
 
     onCategoryChanged = (e) =>{
