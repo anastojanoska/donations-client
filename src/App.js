@@ -13,7 +13,7 @@ import Footer from "./components/Layout/Footer";
 import OrganizationCategories from "./components/DonationCategories/OrganizationCategories";
 import Contact from "./components/Contact/Contact";
 import UserProfile from "./components/Profile/UserProfile";
-
+import OrganizationsPage from "./components/DonationCategories/OrganizationsPage";
 
 //ova se pravi za ako napravime refresh da ostaneme logirani
 //check for token
@@ -35,7 +35,7 @@ class App extends Component {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/about-us" component={AboutUs} />
-                  <Route exact path="/donation-categories" component={OrganizationCategories} />
+                  <Route exact path="/donation-categories" component={OrganizationsPage} />
                   <Route exact path="/contact" component={Contact} />
                   <Route exact path="/user-profile" component={UserProfile} />
                   <Footer/>
