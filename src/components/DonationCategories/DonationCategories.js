@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import {getAllOrganizationCategories} from "../../repository/OrganizationCategory";
+import axios from "axios";
 
 
 class DonationCategories extends Component {
@@ -7,21 +9,37 @@ class DonationCategories extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            categories: [],
             category:""
         }
     }
 
-
+    componentDidMount() {
+        this.loadOrganizationCategories();
+    }
 
 
     onCategoryChanged = (e) =>{
         this.setState({
             category: e.currentTarget.value
         });
-    }
+    };
+
+    loadOrganizationCategories = () => {
+        getAllOrganizationCategories()
+            .then(response => response.data)
+            .then((data) => {
+                console.log(data)
+                this.setState({
+                    categories: data
+                })
+            });
+    };
 
     render() {
         var showCategory = <div> </div>;
+
+        const categories = this.state.categories;
 
         showCategory=(
 
