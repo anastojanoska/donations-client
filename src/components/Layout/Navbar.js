@@ -8,7 +8,7 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-sm navbar-danger bg-danger  text-white">
                 <div className="container">
                     <Link to="/">
-                        <img src={logo} style={{width:"60px", height:"60px"}} className="rounded"/>
+                        <img src={logo} alt="" style={{width: "60px", height: "60px"}} className="rounded mr-2"/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                         <span className="navbar-toggler-icon"> </span>
@@ -16,12 +16,12 @@ class Navbar extends Component {
 
                     <div className="collapse navbar-collapse" id="mobile-nav">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item ">
+                            <li className="nav-item">
                                 <Link className="nav-link text-white" to="/about-us"> За нас
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/donation-categories"> Донациски категории
+                                <Link className="nav-link text-white" to="/donation-categories"> Донирај
                                 </Link>
                             </li>
                             <li className="nav-item">

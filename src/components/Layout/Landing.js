@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import pic1 from "../../donate-here.jpg";
-import pic2 from "../../charity-and-donation-vector.jpg";
-import pic3 from "../../donation_box.jpg";
+// import pic1 from "../../donate-here.jpg";
+// import pic2 from "../../charity-and-donation-vector.jpg";
+// import pic3 from "../../donation_box.jpg";
 import pic4 from "../../charity1.jpg";
 
 class Landing extends Component {
@@ -33,7 +33,7 @@ class Landing extends Component {
                                 </div>
 
                             </div>
-                        <img src={pic4} className="w-100"  style={{maxHeight: "600px"}} />
+                        <img src={pic4} alt="" className="w-100"  style={{maxHeight: "600px"}} />
 
                     </div>
                 </div>

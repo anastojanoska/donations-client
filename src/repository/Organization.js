@@ -9,7 +9,7 @@ export const getOrganizationsByCategoryId = (categoryId) => {
 };
 
 export const getOrganizationById = (organizationId) => {
-    return axios.get(`http://localhost:8080/organizations/organization/${id}`)
+    return axios.get(`http://localhost:8080/organizations/organization/${organizationId}`)
 };
 
 export const getDemandsForOrganization = (organizationId) => {
