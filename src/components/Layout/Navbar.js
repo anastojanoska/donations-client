@@ -21,7 +21,7 @@ class Navbar extends Component {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/donation-categories"> Донирај
+                                <Link className="nav-link text-white" to="/organizations"> Донирај
                                 </Link>
                             </li>
                             <li className="nav-item">

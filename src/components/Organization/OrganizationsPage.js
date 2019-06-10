@@ -46,11 +46,13 @@ class OrganizationsPage extends Component {
     render() {
         return (
             <div className="container">
-                <OrganizationCategories categories={this.state.categories}
+                {/* ova e na dimsa, jas dole ke probam na dr nacin
+                 <OrganizationCategories categories={this.state.categories}
                                         onSelectCategory={this.handleOrganizationCategorySelection.bind(this)}/>
-                {this.state.organizations &&
+                  {this.state.organizations &&
                  <OrganizationsByCategory organizations={this.state.organizations}/> // ovie props ne se prenesuvaat zatoa pagja
-                }
+                }*/}
+                <OrganizationCategories categories={this.state.categories}/>
             </div>
         );
     }
