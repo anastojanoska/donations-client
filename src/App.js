@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 //import jwt_decode from 'jwt-decode';
 
-
 import Navbar from "./components/Layout/Navbar";
 import Landing from "./components/Layout/Landing";
 import Login from "./components/Home/Login/Login";
@@ -14,6 +13,9 @@ import Footer from "./components/Layout/Footer";
 import Contact from "./components/Contact/Contact";
 import UserProfile from "./components/Profile/UserProfile";
 import OrganizationsPage from "./components/Organization/OrganizationsPage";
+import DemandsByOrganization from "./components/Demands/DemandsByOrganization";
+
+
 
 //ova se pravi za ako napravime refresh da ostaneme logirani
 //check for token
@@ -42,6 +44,7 @@ class App extends Component {
                         <Route exact path="/organizations" component={OrganizationsPage}/>
                         <Route exact path="/contact" component={Contact}/>
                         <Route exact path="/user-profile" component={UserProfile}/>
+                        <Route exact path="/organizations/demands-by-organization" component={DemandsByOrganization}/>
                     </Switch>
 
                     <Footer/>
